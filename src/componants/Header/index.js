@@ -24,7 +24,7 @@ const Header = () => {
   const [anchorEl, setAnchorEl] = useState(null);
 
   const [ishandleOpenNotificationDr, setishandleOpenNotificationDr] =
-  useState(false);
+    useState(false);
 
   const [ishandleOpenMessageDr, setishandleOpenMessageDr] =
     useState(false);
@@ -90,7 +90,7 @@ const Header = () => {
               </Button>
 
               <Button className="rounded-circle" id="space">
-                <IoCartOutline onClick={handleOpenOrderDr}/>
+                <IoCartOutline onClick={handleOpenOrderDr} />
                 <Menu
                   anchorEl={ishandleOpenOrderDr}
                   id="Notification-menu"
@@ -233,7 +233,7 @@ const Header = () => {
               </Button>
 
               <Button className="rounded-circle" id="space">
-                <MdOutlineMailOutline onClick={handleOpenMessageDr}/>
+                <MdOutlineMailOutline onClick={handleOpenMessageDr} />
                 <Menu
                   anchorEl={ishandleOpenMessageDr}
                   id="Notification-menu"

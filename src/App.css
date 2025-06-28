@@ -9,7 +9,7 @@ body{font-family: "Open Sans", sans-serif; background: #ebe9e9;}
 .btn-blue {background: #0858f7 !important; font-size: 14px !important; font-weight: 600 !important; color: #fff !important; border: none;border-radius: 5px; height: 30px;}
 
 
-header{width: 100%; height: 70px; background: #fff;}
+header{width: 100%; height: 70px; background: #fff; position: fixed; top: 0px; left: 0px; z-index: 1000;}
 header .logo {text-decoration: none;}
 header .logo img{width: 45px;}
 header .logo span{color: #403E57; font-weight: 800; font-size: 24px;}
@@ -42,7 +42,7 @@ header button.rounded-circle:hover svg{ color: #0858f7 !important;}
 #account-menu .log {color: #ff0000 !important;}
 #account-menu .log svg {color: #ff0000 !important;}
 
-#Notification-menu .MuiPaper-elevation {right: 20% !important; width: 330px; left: auto !important;}
+#Notification-menu .MuiPaper-elevation {right: 20% !important; width: 330px; left: auto !important; top: 72px !important;}
 #Notification-menu li.MuiButtonBase-root {background: #0858f70f;}
 #Notification-menu li.MuiButtonBase-root:hover {background: #979aa00f !important;}
 
@@ -55,3 +55,48 @@ header button.rounded-circle:hover svg{ color: #0858f7 !important;}
 #Notification-menu .dropdownInfo p {font-size: 12px; margin-left: 15px !important; font-weight: 600; margin-top: 0px;}
 .text-sky {color: #0858f7;}
 .scroll {max-height: 300px; overflow-y: scroll; overflow-x: hidden;}
+
+
+.main .sidebarWrapper {width: 20%; flex: 0 0 20%; transition: all 0.3s ease-in-out;}
+.main .sidebarWrapper .sidebar {width: 20%;  height: 100vh; max-height: calc(100% - 70px); background: #fff; position: fixed; top: 70px; left: 0px; overflow-y: scroll; overflow-x: hidden;}
+
+.main .sidebarWrapper .sidebar::-webkit-scrollbar { width: 3px !important; }
+.main .sidebarWrapper .sidebar::-webkit-scrollbar-thumb {background: transparent !important;}
+.main .sidebarWrapper:hover .sidebar::-webkit-scrollbar {background: #0858f7 !important;}
+
+.main .sidebarWrapper .sidebar ul {margin-bottom: 0px; padding-left: 0px;}
+.main .sidebarWrapper .sidebar ul li {list-style: none;}
+
+.main .sidebarWrapper .sidebar ul li button {color: #5e5d72; text-align: left; justify-content: left; padding: 12px 15px !important; align-items: center; text-transform: capitalize !important; font-weight: 600 !important; font-size: 15px; width: 260px !important;}
+
+.main .sidebarWrapper .sidebar ul li button .icon {display: flex; align-items: center; justify-content: center; width: 25px; height: 25px; margin-right: 10px;}
+
+.main .sidebarWrapper .sidebar ul li button .icon svg {color: #5e5d72; font-size: 20px;}
+
+.main .sidebarWrapper .sidebar ul li button .arrow {margin-left: auto; display: flex; align-items: center; justify-content: center; width: 25px; height: 25px; transition: all 0.3s ease-in-out;}
+
+.main .sidebarWrapper .sidebar ul li button:hover {background: #dfdfe6;}
+.main .sidebarWrapper .sidebar ul li button.active{background: #dfdfe6; color: #0858f7;}
+.main .sidebarWrapper .sidebar ul li button.active svg{ color: #0858f7;}
+.main .sidebarWrapper .sidebar ul li button.active .arrow{transform: rotate(90deg);}
+
+.main .sidebarWrapper .sidebar ul .submenu {padding-left: 26px; position: relative;}
+.main .sidebarWrapper .sidebar ul .submenu::before {content: ''; width: 1px; height: 95%;}
+.main .sidebarWrapper .sidebar ul .submenu li {width: 100%; list-style: none; border-left: 1px solid #c3c3d2; padding-left: 25px;}
+.main .sidebarWrapper .sidebar ul .submenu li a {color: #5e5d72; text-decoration: none; display: block; padding: 5px 0px; font-size: 14px; font-weight: 500; transition: all 0.3s;}
+
+.main .sidebarWrapper .sidebar ul .submenu li a:hover { color: #0858f7;}
+
+.main .sidebarWrapper .sidebar ul .submenuWrapper.colapsed { display: none;}
+.main .sidebarWrapper .sidebar ul .submenuWrapper.colapse { display: block;}
+
+.logoutWrapper {padding: 0px 25px;}
+.logoutWrapper .logoutBox {width: 100%; height: 140px; padding: 45px; background: #bcd2fd; border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;}
+
+.logoutWrapper .logoutBox::before {content: ''; width: 65px; height: 65px; background: #0858f7; border-radius: 100%; position: absolute; top: -20px; right: -5px; opacity: 0.5;}
+
+.logoutWrapper .logoutBox::after {content: ''; width: 30px; height: 30px; background: #0858f7; border-radius: 100%; position: absolute; top: 20px; left: 10px; opacity: 0.5;}
+
+.logoutWrapper .logoutBox button {font-size:14px !important; font-weight: 600 !important;}
+.logoutWrapper .logoutBox button svg{font-size: 18px; margin-right: 5px;}
+
